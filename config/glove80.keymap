@@ -30,7 +30,7 @@
 #define k_F8	7
 #define k_F9	8
 #define k_F10	9
-	
+
 	/*ROW 02*/
 #define k_ESC	10
 #define k_N1	11
@@ -44,7 +44,7 @@
 #define k_N9	19
 #define k_N0	20
 #define k_EQUAL	21
-	
+
 	/*ROW 03*/
 #define k_TAB	22
 #define k_Q	23
@@ -58,7 +58,7 @@
 #define k_O	31
 #define k_P	32
 #define k_LBKT	33
-	
+
 	/*ROW 04*/
 #define k_SQT	34
 #define k_A	35
@@ -72,7 +72,7 @@
 #define k_L	43
 #define k_SEMI	44
 #define k_BSLH	45
-	
+
 	/*ROW 05*/
 #define k_MINUS	46
 #define k_Y	47
@@ -80,7 +80,7 @@
 #define k_C	49
 #define k_V	50
 #define k_B	51
-	
+
 #define k_LSHIFT	52
 #define k_LCTRL	53
 #define k_LOWER	54
@@ -88,33 +88,33 @@
 #define k_LGUI	55
 #define k_RCTRL	56
 #define k_RSHIFT	57
-	
+
 #define k_N	58
 #define k_M	59
-#define k_COMMA	60
-#define k_DOT	61
-#define k_FSLH	62
+#define k_UP	60
+#define k_COMMA	61
+#define k_DOT	62
 #define k_PG_UP	63
-	
+
 	/*ROW 06*/
 #define k_MAGIC	64
 #define k_GRAVE	65
 #define k_RBKT	66
 #define k_HOME	67
 #define k_END	68
-	
+
 #define k_BSPC	69
 #define k_DEL	70
 #define k_LALT	71
-	
+
 #define k_RALT	72
 #define k_RET	73
 #define k_SPACE	74
-	
+
 #define k_LEFT	75
-#define k_UP	76
-#define k_DOWN	77
-#define k_RIGHT	78
+#define k_DOWN	76
+#define k_RIGHT	77
+#define k_FSLH	78
 #define k_PG_DN	79
 
 
@@ -138,7 +138,7 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&rgb_ug_status_macro>;
         };
-	
+
 	prog_caps: behavior_prog_caps_word {
 		compatible	=	"zmk,behavior-caps-word";
 		label	=	"PROG_CAPS";
@@ -251,7 +251,7 @@
 		bindings	=	<&kp LS(N1)>, <&kp SQT>;
 		mods	=	<(MOD_RALT)>;
 	};
-	
+
     };
 
     macros {
@@ -383,8 +383,16 @@
 		key-positions	=	<k_DEL k_LALT>;
 		bindings	=	<&kp SPACE>;
 	};
+
+	combo_LGUI {
+		timeout-ms	=	<50>;
+		key-positions	=	<k_MAGIC k_GRAVE>;
+		bindings	=	<&kp LGUI>;
+	};
+
+
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -398,20 +406,20 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-	    
+
 	&kp F1	&kp F2	&kp F3	&td_f4alt	&kp F5									&kp F6	&kp F7	&kp F8	&kp F9	&kp F10
 	&kp ESC	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5							&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp EQUAL
 	&mod_ra_TAB	&kp Q	&kp W	&kp E	&mod_ra_R	&mod_ra_T							&kp Y	&kp U	&kp I	&kp O	&kp P	&kp LBKT
 	&mod_ra_SQT	&kp A	&mod_ra_S	&mod_ra_D	&kp F	&kp G							&kp H	&kp J	&kp K	&kp L	&kp SEMI	&kp BSLH
-	&mod_ra_MINUS	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LCTRL	&layer_td	&kp LGUI	&kp RCTRL	&td_rshift	&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&kp PG_UP
-	&magic MAGIC 0	&mod_ra_GRAVE	&mod_ra_RBKT	&kp HOME	&kp END		&kp BSPC	&kp DEL	&kp LALT	&td_altopt	&kp RET	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&kp PG_DN
+	&mod_ra_MINUS	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LCTRL	&layer_td	&kp LGUI	&kp RCTRL	&td_rshift	&kp N	&kp M	&kp UP	&kp COMMA	&kp DOT	&kp PG_UP
+	&magic MAGIC 0	&mod_ra_GRAVE	&mod_ra_RBKT	&kp HOME	&kp END		&kp BSPC	&kp DEL	&kp LALT	&td_altopt	&kp RET	&kp SPACE		&kp LEFT	&kp DOWN	&kp RIGHT	&kp FSLH	&kp PG_DN
 
             >;
         };
 
         lower_layer {
             bindings = <
-	    
+
 	&kp C_BRI_DN	&kp C_BRI_UP	&kp CAPS	&kp KP_NUM	&kp SCROLLLOCK									&kp C_VOL_DN	&kp C_VOL_UP	&kp C_PP	&kp C_PREV	&kp C_NEXT
 	&kp ESC	&none	&kp LALT	&none	&none	&kp HOME							&kp C_MUTE	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp KP_N0	&kp F11
 	&kp TAB	&none	&none	&kp UP_ARROW	&none	&kp END							&kp KP_SLASH	&kp KP_N7	&kp KP_N8	&kp KP_N9	&kp KP_MULTIPLY	&kp F12
@@ -424,7 +432,7 @@
 
         magic_layer {
             bindings = <
-	    
+
 	&kp C_BRI_DN	&kp C_BRI_UP	&kp CAPS	&kp KP_NUM	&kp SCROLLLOCK									&kp C_VOL_DN	&kp C_VOL_UP	&kp C_PREV	&kp C_NEXT	&kp C_PP
 	&kp ESC	&none	&none	&none	&none	&none							&kp C_MUTE	&none	&none	&none	&none	&kp F11
 	&kp TAB	&rgb_ug RGB_SPI	&rgb_ug RGB_SAI	&rgb_ug RGB_HUI	&rgb_ug RGB_BRI	&rgb_ug RGB_TOG							&none	&none	&none	&none	&none	&kp F12
@@ -432,7 +440,7 @@
 	&kp LGUI	&none	&none	&none	&none	&none	&bt_2	&bt_3	&bootloader	&bootloader	&sys_reset	&none	&none	&none	&none	&none	&none	&kp RG(PG_UP)
 	&trans	&kp K_APP	&kp PRINTSCREEN	&kp PAUSE_BREAK	&kp INS		&bt_0	&bt_1	&out OUT_USB	&bt BT_CLR	&bt BT_CLR_ALL	&none		&kp RG(LEFT)	&kp RG(UP)	&kp RG(DOWN)	&kp RG(RIGHT)	&kp RG(PG_DN)
 
-	    
+
             >;
         };
 
