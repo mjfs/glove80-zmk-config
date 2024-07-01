@@ -17,7 +17,7 @@
 #define DEFAULT 0
 #define LOWER 1
 #define MAGIC 2
-#define CURSOR 3
+#define CURSORS 3
 
 	/*ROW 01*/
 #define k_F1	0
