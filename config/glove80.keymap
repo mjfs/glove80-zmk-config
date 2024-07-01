@@ -17,7 +17,7 @@
 #define DEFAULT 0
 #define LOWER 1
 #define MAGIC 2
-#define CURSORS 3
+#define CURSOR 3
 
 	/*ROW 01*/
 #define k_F1	0
@@ -447,10 +447,10 @@
             bindings = <
 	    
 	&none	&none	&none	&none	&none									&none	&none	&none	&none	&none
-	&kp ESC	&none	&none	&none	&none	&none							&kp none	&none	&none	&none	&none	&none
-	&none	&kp Q	&kp W	&kp E	&kp R	&kp T							&kp none	&none	&kp UP_ARROW	&none	&none	&none
-	&none	&kp A	&kp S	&kp D	&kp F	&kp G							&kp none	&kp LEFT_ARROW	&kp DOWN_ARROW	&kp RIGHT_ARROW	&none	&none
-	&none	&none	&none	&none	&none	&none	&trans	&trans	&to DEFAULT	&trans	&trans	&trans	&kp none	&&none	&none	&none	&none	&none
+	&kp ESC	&none	&none	&none	&none	&none							&none	&none	&none	&none	&none	&none
+	&none	&kp Q	&kp W	&kp E	&kp R	&kp T							&none	&none	&kp UP_ARROW	&none	&none	&none
+	&none	&kp A	&kp S	&kp D	&kp F	&kp G							&none	&kp LEFT_ARROW	&kp DOWN_ARROW	&kp RIGHT_ARROW	&none	&none
+	&none	&none	&none	&none	&none	&none	&trans	&trans	&to DEFAULT	&trans	&trans	&trans	&none	&none	&none	&none	&none	&none
 	&magic MAGIC 0	&none	&none	&none	&none		&trans	&trans	&trans	&trans	&trans	&trans		&none	&none	&none	&none	&none
 	
             >;
