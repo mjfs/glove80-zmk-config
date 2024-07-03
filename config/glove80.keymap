@@ -32,7 +32,7 @@
 #define k_F10	9
 	
 	/*ROW 02*/
-#define k_ESC	10
+#define k_RBKT	10
 #define k_N1	11
 #define k_N2	12
 #define k_N3	13
@@ -46,7 +46,7 @@
 #define k_EQUAL	21
 	
 	/*ROW 03*/
-#define k_TAB	22
+#define k_GRAVE	22
 #define k_Q	23
 #define k_W	24
 #define k_E	25
@@ -85,7 +85,7 @@
 #define k_LCTRL	53
 #define k_LOWER	54
 
-#define k_LGUI	55
+#define k_TAB	55
 #define k_RCTRL	56
 #define k_RSHIFT	57
 	
@@ -98,8 +98,8 @@
 	
 	/*ROW 06*/
 #define k_MAGIC	64
-#define k_GRAVE	65
-#define k_RBKT	66
+#define k_LGUI	65
+#define k_ESC	66
 #define k_HOME	67
 #define k_END	68
 	
@@ -317,12 +317,6 @@
 
 
 
-	combo_ESC {
-		timeout-ms	=	<50>;
-		key-positions	=	<k_F1 k_ESC>;
-		bindings	=	<&kp ESC>;
-	};
-
 	combo_ESC2 {
 		timeout-ms	=	<50>;
 		key-positions	=	<k_LALT k_LOWER>;
@@ -331,7 +325,7 @@
 
 	combo_ESC3 {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_LGUI k_RALT>;
+		key-positions	=	<k_TAB k_RALT>;
 		bindings	=	<&kp ESC>;
 	};
 
@@ -339,7 +333,7 @@
 
 	combo_SHIFT_HOME {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_RBKT k_HOME>;
+		key-positions	=	<k_ESC k_HOME>;
 		bindings	=	<&kp LS(HOME)>;
 	};
 
@@ -386,7 +380,7 @@
 	
 	combo_LGUI {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_MAGIC k_GRAVE>;
+		key-positions	=	<k_MAGIC k_LGUI>;
 		bindings	=	<&kp LGUI>;
 	};
 	
@@ -407,11 +401,11 @@
             bindings = <
 	    
 	&kp F1	&kp F2	&kp F3	&td_f4alt	&kp F5									&kp F6	&kp F7	&kp F8	&kp F9	&kp F10
-	&kp ESC	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5							&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp EQUAL
-	&mod_ra_TAB	&kp Q	&kp W	&kp E	&mod_ra_R	&mod_ra_T							&kp Y	&kp U	&kp I	&kp O	&kp P	&kp LBKT
+	&mod_ra_RBKT	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5							&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp EQUAL
+	&mod_ra_GRAVE	&kp Q	&kp W	&kp E	&mod_ra_R	&mod_ra_T							&kp Y	&kp U	&kp I	&kp O	&kp P	&kp LBKT
 	&mod_ra_SQT	&kp A	&mod_ra_S	&mod_ra_D	&kp F	&kp G							&kp H	&kp J	&kp K	&kp L	&kp SEMI	&kp BSLH
-	&mod_ra_MINUS	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LCTRL	&layer_td	&kp LGUI	&kp RCTRL	&td_rshift	&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&kp PG_UP
-	&magic MAGIC 0	&mod_ra_GRAVE	&mod_ra_RBKT	&kp HOME	&kp END		&kp BSPC	&kp DEL	&kp LALT	&td_altopt	&kp RET	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&kp PG_DN
+	&mod_ra_MINUS	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LCTRL	&layer_td	&mod_ra_TAB	&kp RCTRL	&td_rshift	&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&kp PG_UP
+	&magic MAGIC 0	&kp LGUI	&kp ESC	&kp HOME	&kp END		&kp BSPC	&kp DEL	&kp LALT	&td_altopt	&kp RET	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&kp PG_DN
 
             >;
         };
@@ -447,11 +441,11 @@
             bindings = <
 	    
 	&none	&none	&none	&none	&none									&none	&none	&none	&none	&none
-	&kp ESC	&none	&none	&none	&none	&none							&none	&none	&none	&none	&none	&none
+	&none	&none	&none	&none	&none	&none							&none	&none	&none	&none	&none	&none
 	&none	&kp Q	&kp W	&kp E	&kp R	&kp T							&none	&none	&kp UP_ARROW	&none	&kp P	&none
 	&none	&kp A	&kp S	&kp D	&kp F	&kp G							&none	&kp LEFT_ARROW	&kp DOWN_ARROW	&kp RIGHT_ARROW	&none	&none
 	&none	&none	&none	&none	&none	&none	&trans	&trans	&to DEFAULT	&trans	&trans	&trans	&none	&none	&none	&none	&none	&none
-	&magic MAGIC 0	&none	&none	&none	&none		&kp SPACE	&trans	&trans	&trans	&trans	&trans		&none	&none	&none	&none	&none
+	&magic MAGIC 0	&none	&kp ESC	&none	&none		&kp SPACE	&trans	&trans	&trans	&trans	&trans		&none	&none	&none	&none	&none
 	
             >;
         };
