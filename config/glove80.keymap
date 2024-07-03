@@ -430,7 +430,7 @@
 	&kp ESC	&none	&none	&none	&none	&none							&kp C_MUTE	&none	&none	&none	&none	&kp F11
 	&kp TAB	&rgb_ug RGB_SPI	&rgb_ug RGB_SAI	&rgb_ug RGB_HUI	&rgb_ug RGB_BRI	&rgb_ug RGB_TOG							&none	&none	&none	&none	&none	&kp F12
 	&kp INS	&rgb_ug RGB_SPD	&rgb_ug RGB_SAD	&rgb_ug RGB_HUD	&rgb_ug RGB_BRD	&rgb_ug RGB_EFF							&none	&none	&none	&none	&none	&kp GRAVE
-	&kp LGUI	&none	&none	&none	&none	&none	&bt_2	&bt_3	&bootloader	&bootloader	&sys_reset	&magic MAGIC 0	&none	&none	&none	&none	&none	&kp RG(PG_UP)
+	&kp LGUI	&none	&none	&none	&none	&none	&bt_2	&bt_3	&bootloader	&bootloader	&sys_reset	&magic MAGIC 0	&to FACTORY_TEST	&none	&none	&none	&none	&kp RG(PG_UP)
 	&trans	&kp K_APP	&kp PRINTSCREEN	&kp PAUSE_BREAK	&kp INS		&bt_0	&bt_1	&out OUT_USB	&bt BT_CLR	&bt BT_CLR_ALL	&to CURSORS		&kp RG(LEFT)	&kp RG(UP)	&kp RG(DOWN)	&kp RG(RIGHT)	&kp RG(PG_DN)
 
 	    
