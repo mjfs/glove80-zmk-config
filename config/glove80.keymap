@@ -311,7 +311,7 @@
 
 	combo_ESC {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_DEL k_LOWER>;
+		key-positions	=	<k_RCTRL k_LOWER>;
 		bindings	=	<&kp ESC>;
 	};
 
@@ -353,7 +353,7 @@
 	
 	combo_CTRL_BSPC {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_BSPC k_LCTRL>;
+		key-positions	=	<k_BSPC k_DEL>;
 		bindings	=	<&kp LC(BSPC)>;
 	};
 
