@@ -337,12 +337,6 @@
 
 
 
-	combo_TAB {
-		timeout-ms	=	<50>;
-		key-positions	=	<k_RALT k_RET>;
-		bindings	=	<&kp TAB>;
-	};
-
 	combo_BSPC {
 		timeout-ms	=	<50>;
 		key-positions	=	<k_RCTRL k_SPACE>;
@@ -359,26 +353,20 @@
 	
 	combo_CTRL_BSPC {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_BSPC k_RCTRL>;
+		key-positions	=	<k_BSPC k_LCTRL>;
 		bindings	=	<&kp LC(BSPC)>;
 	};
 
 	combo_RET {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_LCTRL k_LOWER>;
+		key-positions	=	<k_LALT k_LOWER>;
 		bindings	=	<&kp RET>;
 	};
 
-	combo_SPACE {
-		timeout-ms	=	<50>;
-		key-positions	=	<k_DEL k_LALT>;
-		bindings	=	<&kp SPACE>;
-	};
-	
-	combo_LGUI {
+	combo_K_APP {
 		timeout-ms	=	<50>;
 		key-positions	=	<k_MAGIC k_LGUI>;
-		bindings	=	<&kp LGUI>;
+		bindings	=	<&kp K_APP>;
 	};
 	
     };
