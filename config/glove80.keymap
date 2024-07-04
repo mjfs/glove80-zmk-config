@@ -82,11 +82,11 @@
 #define k_B	51
 	
 #define k_LSHIFT	52
-#define k_LCTRL	53
+#define k_LALT	53
 #define k_LOWER	54
 
 #define k_TAB	55
-#define k_RCTRL	56
+#define k_RALT	56
 #define k_RSHIFT	57
 	
 #define k_N	58
@@ -104,11 +104,11 @@
 #define k_END	68
 	
 #define k_BSPC	69
-#define k_DEL	70
-#define k_LALT	71
+#define k_LCTRL	70
+#define k_DEL	71
 	
-#define k_RALT	72
-#define k_RET	73
+#define k_RET	72
+#define k_SPACE	73
 #define k_SPACE	74
 	
 #define k_LEFT	75
@@ -146,20 +146,12 @@
 		continue-list	=	<BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 FSLH>;
 	};
 
-	td_f4alt: td_f4alt {
-		compatible	=	"zmk,behavior-tap-dance";
-		label	=	"F4ALT";
-		#binding-cells	=	<0>;
-		tapping-term-ms	=	<400>;
-		bindings	=	<&kp F4>, <&kp LA(F4)>;
-	};
-
-	td_altopt: tap_dance_2 {
+	td_ctlopt: tap_dance_2 {
 		compatible	=	"zmk,behavior-tap-dance";
 		label	=	"TAP_OPTION";
 		#binding-cells	=	<0>;
 		tapping-term-ms	=	<400>;
-		bindings	=	<&kp RALT>, <&kp K_APP>;
+		bindings	=	<&kp RCTRL>, <&kp K_APP>;
 	};
 
 	td_lshift: tap_dance_3 {
@@ -359,7 +351,12 @@
 
 
 
-
+	combo_ALT_F4 {
+		timeout-ms	=	<50>;
+		key-positions	=	<k_F4 k_F5>;
+		bindings	=	<&kp LA(F4)>;
+	};
+	
 	combo_CTRL_BSPC {
 		timeout-ms	=	<50>;
 		key-positions	=	<k_BSPC k_DEL>;
@@ -404,8 +401,8 @@
 	&mod_ra_RBKT	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5							&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp EQUAL
 	&mod_ra_GRAVE	&kp Q	&kp W	&kp E	&mod_ra_R	&mod_ra_T							&kp Y	&kp U	&kp I	&kp O	&kp P	&kp LBKT
 	&mod_ra_SQT	&kp A	&mod_ra_S	&mod_ra_D	&kp F	&kp G							&kp H	&kp J	&kp K	&kp L	&kp SEMI	&kp BSLH
-	&mod_ra_MINUS	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LCTRL	&layer_td	&mod_ra_TAB	&kp RCTRL	&td_rshift	&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&kp PG_UP
-	&magic MAGIC 0	&kp LGUI	&kp ESC	&kp HOME	&kp END		&kp BSPC	&kp DEL	&kp LALT	&td_altopt	&kp RET	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&kp PG_DN
+	&mod_ra_MINUS	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LALT	&layer_td	&mod_ra_TAB	&kp RALT	&td_rshift	&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&kp PG_UP
+	&magic MAGIC 0	&kp LGUI	&kp ESC	&kp HOME	&kp END		&kp BSPC	&kp LCTRL	&kp DEL	&kp RET	&kp td_ctlopt	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&kp PG_DN
 
             >;
         };
