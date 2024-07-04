@@ -402,7 +402,7 @@
 	&mod_ra_GRAVE	&kp Q	&kp W	&kp E	&mod_ra_R	&mod_ra_T							&kp Y	&kp U	&kp I	&kp O	&kp P	&kp LBKT
 	&mod_ra_SQT	&kp A	&mod_ra_S	&mod_ra_D	&kp F	&kp G							&kp H	&kp J	&kp K	&kp L	&kp SEMI	&kp BSLH
 	&mod_ra_MINUS	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LALT	&layer_td	&mod_ra_TAB	&kp RALT	&td_rshift	&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&kp PG_UP
-	&magic MAGIC 0	&kp LGUI	&kp ESC	&kp HOME	&kp END		&kp BSPC	&kp LCTRL	&kp DEL	&kp RET	&kp td_ctlopt	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&kp PG_DN
+	&magic MAGIC 0	&kp LGUI	&kp ESC	&kp HOME	&kp END		&kp BSPC	&kp LCTRL	&kp DEL	&kp RET	&td_ctlopt	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&kp PG_DN
 
             >;
         };
