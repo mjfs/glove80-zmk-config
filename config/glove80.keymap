@@ -104,11 +104,11 @@
 #define k_END	68
 	
 #define k_BSPC	69
-#define k_LCTRL	70
-#define k_DEL	71
+#define k_DEL	70
+#define k_LCTRL	71
 	
-#define k_RET	72
-#define k_RCTRL	73
+#define k_RCTRL	72
+#define k_RET	73
 #define k_SPACE	74
 	
 #define k_LEFT	75
@@ -305,19 +305,19 @@
 		timeout-ms	=	<50>;
 		key-positions	=	<k_F9 k_F10>;
 		bindings	=	<&kp F12>;
-		};
+	};
 
 
 
-	combo_ESC2 {
+	combo_ESC {
 		timeout-ms	=	<50>;
 		key-positions	=	<k_DEL k_LOWER>;
 		bindings	=	<&kp ESC>;
 	};
 
-	combo_ESC3 {
+	combo_ESC2 {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_TAB k_RET>;
+		key-positions	=	<k_RCTRL k_TAB>;
 		bindings	=	<&kp ESC>;
 	};
 
@@ -339,7 +339,7 @@
 
 	combo_BSPC {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_RCTRL k_SPACE>;
+		key-positions	=	<k_RET k_SPACE>;
 		bindings	=	<&kp BSPC>;
 	};
 
@@ -390,7 +390,7 @@
 	&mod_ra_GRAVE	&kp Q	&kp W	&kp E	&mod_ra_R	&mod_ra_T							&kp Y	&kp U	&kp I	&kp O	&kp P	&kp LBKT
 	&mod_ra_SQT	&kp A	&mod_ra_S	&mod_ra_D	&kp F	&kp G							&kp H	&kp J	&kp K	&kp L	&kp SEMI	&kp BSLH
 	&mod_ra_MINUS	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LALT	&layer_td	&mod_ra_TAB	&kp RALT	&td_rshift	&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&kp PG_UP
-	&magic MAGIC 0	&kp LGUI	&kp ESC	&kp HOME	&kp END		&kp BSPC	&kp LCTRL	&kp DEL	&kp RET	&td_ctlopt	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&kp PG_DN
+	&magic MAGIC 0	&kp LGUI	&kp ESC	&kp HOME	&kp END		&kp BSPC	&kp DEL	&kp LCTRL	&td_ctlopt	&kp RET	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&kp PG_DN
 
             >;
         };
