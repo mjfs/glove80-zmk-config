@@ -345,7 +345,7 @@
 
 	combo_BSPC {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_RET k_SPACE>;
+		key-positions	=	<k_RCTRL k_SPACE>;
 		bindings	=	<&kp BSPC>;
 	};
 
@@ -359,7 +359,7 @@
 	
 	combo_CTRL_BSPC {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_BSPC k_DEL>;
+		key-positions	=	<k_BSPC k_RCTRL>;
 		bindings	=	<&kp LC(BSPC)>;
 	};
 
