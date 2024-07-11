@@ -115,7 +115,7 @@
 #define k_UP	76
 #define k_DOWN	77
 #define k_RIGHT	78
-#define k_SQT!	79
+#define k_SQT	79
 
 / {
     behaviors {
