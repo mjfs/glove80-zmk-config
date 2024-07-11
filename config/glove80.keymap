@@ -231,7 +231,7 @@
 		compatible	=	"zmk,behavior-mod-morph";
 		label	=	"MOD_RALT_GRAVE_QUESTION";
 		#binding-cells	=	<0>;
-		!bindings	=	<&kp LS(MINUS)>, <&kp RBKT>;
+		bindings	=	<&kp LS(MINUS)>, <&kp RBKT>;
 		mods	=	<(MOD_RALT)>;
 	};
 
