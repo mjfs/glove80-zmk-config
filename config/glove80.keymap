@@ -104,8 +104,8 @@
 #define k_F10	68
 	
 #define k_BSPC	69
-#define k_LALT	70
-#define k_DEL	71
+#define k_DEL	70
+#define k_LALT	71
 	
 #define k_RALT	72
 #define k_RET	73
@@ -314,11 +314,6 @@
 		bindings	=	<&kp ESC>;
 	};
 
-	combo_ESC2 {
-		timeout-ms	=	<50>;
-		key-positions	=	<k_LOWER k_DEL>;
-		bindings	=	<&kp ESC>;
-	};
 
 
 
@@ -356,15 +351,22 @@
 		bindings	=	<&kp LC(BSPC)>;
 	};
 
-	combo_RET {
+	combo_SPACE {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_LALT k_LOWER>;
-		bindings	=	<&kp RET>;
+		key-positions	=	<k_DEL k_LALT>;
+		bindings	=	<&kp SPACE>;
 	};
 
+
+	combo_RET {
+		timeout-ms	=	<50>;
+		key-positions	=	<k_LOWER k_LALT>;
+		bindings	=	<&kp RET>;
+	};
+	
 	combo_K_APP {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_MAGIC k_LCTRL>;
+		key-positions	=	<k_MAGIC k_RCTRL>;
 		bindings	=	<&kp K_APP>;
 	};
 	
@@ -392,8 +394,8 @@
 	    
             bindings = <
 	    
-	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5									&kp HOME	&kp END	&kp PG_UP	&kp PG_DN	&mod_ra_SQT
-	&mod_ra_MINUS	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5							&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp EQUAL
+	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5									&kp HOME	&kp END	&kp PG_UP	&kp PG_DN	&mod_ra_MINUS
+	&mod_ra_SQT	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5							&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp EQUAL
 	&kp ESC	&kp Q	&kp W	&kp E	&mod_ra_R	&mod_ra_T							&kp Y	&kp U	&kp I	&kp O	&kp P	&kp LBKT
 	&mod_ra_TAB	&kp A	&mod_ra_S	&mod_ra_D	&kp F	&kp G							&kp H	&kp J	&kp K	&kp L	&kp SEMI	&kp BSLH
 	&kp LGUI	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LCTRL	&layer_td	&magic MAGIC 0	&td_ctlopt	&td_rshift	&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&mod_ra_GRAVE
