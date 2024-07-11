@@ -19,20 +19,20 @@
 #define MAGIC 2
 #define CURSORS 3
 
-	/*ROW 01*/
+/*ROW 01*/
 #define k_F1	0
 #define k_F2	1
 #define k_F3	2
 #define k_F4	3
 #define k_F5	4
-#define k_F6	5
-#define k_F7	6
-#define k_F8	7
-#define k_F9	8
-#define k_F10	9
+#define k_HOME	5
+#define k_END	6
+#define k_RBKT	7
+#define k_PG_UP	8
+#define k_PG_DN	9
 	
 	/*ROW 02*/
-#define k_RBKT	10
+#define k_GRAVE	10
 #define k_N1	11
 #define k_N2	12
 #define k_N3	13
@@ -46,7 +46,7 @@
 #define k_EQUAL	21
 	
 	/*ROW 03*/
-#define k_GRAVE	22
+#define k_ESC	22
 #define k_Q	23
 #define k_W	24
 #define k_E	25
@@ -60,7 +60,7 @@
 #define k_LBKT	33
 	
 	/*ROW 04*/
-#define k_SQT	34
+#define k_TAB	34
 #define k_A	35
 #define k_S	36
 #define k_D	37
@@ -74,7 +74,7 @@
 #define k_BSLH	45
 	
 	/*ROW 05*/
-#define k_MINUS	46
+#define k_LGUI	46
 #define k_Y	47
 #define k_X	48
 #define k_C	49
@@ -82,11 +82,11 @@
 #define k_B	51
 	
 #define k_LSHIFT	52
-#define k_LALT	53
+#define k_LCTRL	53
 #define k_LOWER	54
 
-#define k_TAB	55
-#define k_RALT	56
+#define k_MAGIC	55
+#define k_RCTRL	56
 #define k_RSHIFT	57
 	
 #define k_N	58
@@ -94,20 +94,20 @@
 #define k_COMMA	60
 #define k_DOT	61
 #define k_FSLH	62
-#define k_PG_UP	63
+#define k_MINUS	63
 	
 	/*ROW 06*/
-#define k_MAGIC	64
-#define k_LGUI	65
-#define k_ESC	66
-#define k_HOME	67
-#define k_END	68
+#define k_F6	64
+#define k_F7	65
+#define k_F8	66
+#define k_F9	67
+#define k_F10	68
 	
 #define k_BSPC	69
-#define k_DEL	70
-#define k_LCTRL	71
+#define k_RALT	70
+#define k_DEL	71
 	
-#define k_RCTRL	72
+#define k_LALT	72
 #define k_RET	73
 #define k_SPACE	74
 	
@@ -115,8 +115,7 @@
 #define k_UP	76
 #define k_DOWN	77
 #define k_RIGHT	78
-#define k_PG_DN	79
-
+#define k_SQT	79
 
 / {
     behaviors {
@@ -311,13 +310,13 @@
 
 	combo_ESC {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_RCTRL k_LOWER>;
+		key-positions	=	<k_MAGIC k_RALT>;
 		bindings	=	<&kp ESC>;
 	};
 
 	combo_ESC2 {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_RCTRL k_TAB>;
+		key-positions	=	<k_LOWER k_DEL>;
 		bindings	=	<&kp ESC>;
 	};
 
@@ -325,13 +324,13 @@
 
 	combo_SHIFT_HOME {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_ESC k_HOME>;
+		key-positions	=	<k_HOME k_END>;
 		bindings	=	<&kp LS(HOME)>;
 	};
 
 	combo_SHIFT_END {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_HOME k_END>;
+		key-positions	=	<k_END k_RBKT>;
 		bindings	=	<&kp LS(END)>;
 	};
 
@@ -353,7 +352,7 @@
 	
 	combo_CTRL_BSPC {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_BSPC k_DEL>;
+		key-positions	=	<k_BSPC k_LALT>;
 		bindings	=	<&kp LC(BSPC)>;
 	};
 
@@ -365,7 +364,7 @@
 
 	combo_K_APP {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_MAGIC k_LGUI>;
+		key-positions	=	<k_MAGIC k_LCTRL>;
 		bindings	=	<&kp K_APP>;
 	};
 	
@@ -385,12 +384,12 @@
 
             bindings = <
 	    
-	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5									&kp F6	&kp F7	&kp F8	&kp F9	&kp F10
-	&mod_ra_RBKT	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5							&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp EQUAL
-	&mod_ra_GRAVE	&kp Q	&kp W	&kp E	&mod_ra_R	&mod_ra_T							&kp Y	&kp U	&kp I	&kp O	&kp P	&kp LBKT
-	&mod_ra_SQT	&kp A	&mod_ra_S	&mod_ra_D	&kp F	&kp G							&kp H	&kp J	&kp K	&kp L	&kp SEMI	&kp BSLH
-	&mod_ra_MINUS	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LALT	&layer_td	&mod_ra_TAB	&kp RALT	&td_rshift	&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&kp PG_UP
-	&magic MAGIC 0	&kp LGUI	&kp ESC	&kp HOME	&kp END		&kp BSPC	&kp DEL	&kp LCTRL	&td_ctlopt	&kp RET	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&kp PG_DN
+	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5									&kp HOME	&kp END	&mod_ra_RBKT	&kp PG_UP	&kp PG_DN
+	&mod_ra_GRAVE	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5							&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp EQUAL
+	&kp ESC	&kp Q	&kp W	&kp E	&mod_ra_R	&mod_ra_T							&kp Y	&kp U	&kp I	&kp O	&kp P	&kp LBKT
+	&mod_ra_TAB	&kp A	&mod_ra_S	&mod_ra_D	&kp F	&kp G							&kp H	&kp J	&kp K	&kp L	&kp SEMI	&kp BSLH
+	&kp LGUI	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LCTRL	&layer_td	&magic MAGIC 0	&td_ctlopt	&td_rshift	&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&mod_ra_MINUS
+	&kp F6	&kp F7	&kp F8	&kp F9	&kp F10		&kp BSPC	&kp LALT	&kp DEL	&kp RALT	&kp RET	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&mod_ra_SQT
 
             >;
         };
@@ -415,8 +414,8 @@
 	&kp ESC	&none	&none	&none	&none	&none							&kp C_MUTE	&none	&none	&none	&none	&kp F11
 	&kp TAB	&rgb_ug RGB_SPI	&rgb_ug RGB_SAI	&rgb_ug RGB_HUI	&rgb_ug RGB_BRI	&rgb_ug RGB_TOG							&none	&none	&none	&none	&none	&kp F12
 	&kp INS	&rgb_ug RGB_SPD	&rgb_ug RGB_SAD	&rgb_ug RGB_HUD	&rgb_ug RGB_BRD	&rgb_ug RGB_EFF							&none	&none	&none	&none	&none	&kp GRAVE
-	&kp LGUI	&none	&none	&none	&none	&none	&bt_2	&bt_3	&bootloader	&bootloader	&sys_reset	&magic MAGIC 0	&none	&none	&none	&none	&none	&kp RG(PG_UP)
-	&trans	&kp K_APP	&kp PRINTSCREEN	&kp PAUSE_BREAK	&kp INS		&bt_0	&bt_1	&out OUT_USB	&bt BT_CLR	&bt BT_CLR_ALL	&to CURSORS		&kp RG(LEFT)	&kp RG(UP)	&kp RG(DOWN)	&kp RG(RIGHT)	&kp RG(PG_DN)
+	&kp LGUI	&none	&none	&none	&none	&none	&bt_2	&bt_3	&trans	&trans	&trans	&sys_reset	&kp RG(PG_UP)	&kp RG(PG_DN)	&none	&none	&none	&none
+	&bootloader	&kp K_APP	&kp PRINTSCREEN	&kp PAUSE_BREAK	&kp INS		&bt_0	&bt_1	&out OUT_USB	&to CURSORS	&bt BT_CLR	&bt BT_CLR_ALL		&kp RG(LEFT)	&kp RG(UP)	&kp RG(DOWN)	&kp RG(RIGHT)	&bootloader
 
 	    
             >;
