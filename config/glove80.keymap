@@ -29,7 +29,7 @@
 #define k_END	6
 #define k_PG_UP	7
 #define k_PG_DN	8
-#define k_SQT	9
+#define k_RBKT	9
 	
 	/*ROW 02*/
 #define k_GRAVE	10
@@ -115,7 +115,7 @@
 #define k_UP	76
 #define k_DOWN	77
 #define k_RIGHT	78
-#define k_RBKT	79
+#define k_SQT!	79
 
 / {
     behaviors {
@@ -231,7 +231,7 @@
 		compatible	=	"zmk,behavior-mod-morph";
 		label	=	"MOD_RALT_GRAVE_QUESTION";
 		#binding-cells	=	<0>;
-		bindings	=	<&kp LS(MINUS)>, <&kp RBKT>;
+		!bindings	=	<&kp LS(MINUS)>, <&kp RBKT>;
 		mods	=	<(MOD_RALT)>;
 	};
 
