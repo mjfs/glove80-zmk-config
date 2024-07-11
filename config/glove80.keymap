@@ -104,10 +104,10 @@
 #define k_F10	68
 	
 #define k_BSPC	69
-#define k_RALT	70
+#define k_LALT	70
 #define k_DEL	71
 	
-#define k_LALT	72
+#define k_RALT	72
 #define k_RET	73
 #define k_SPACE	74
 	
@@ -350,7 +350,7 @@
 		bindings	=	<&kp LA(F4)>;
 	};
 	
-	combo_CTRL_BSPC {
+	combo_CTRL_BSP {
 		timeout-ms	=	<50>;
 		key-positions	=	<k_BSPC k_LALT>;
 		bindings	=	<&kp LC(BSPC)>;
