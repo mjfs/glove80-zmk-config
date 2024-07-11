@@ -27,9 +27,9 @@
 #define k_F5	4
 #define k_HOME	5
 #define k_END	6
-#define k_RBKT	7
-#define k_PG_UP	8
-#define k_PG_DN	9
+#define k_PG_UP	7
+#define k_PG_DN	8
+#define k_SQT	9
 	
 	/*ROW 02*/
 #define k_GRAVE	10
@@ -115,7 +115,7 @@
 #define k_UP	76
 #define k_DOWN	77
 #define k_RIGHT	78
-#define k_SQT	79
+#define k_RBKT	79
 
 / {
     behaviors {
@@ -392,12 +392,12 @@
 	    
             bindings = <
 	    
-	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5									&kp HOME	&kp END	&kp PG_UP	&kp PG_DN	&mod_ra_RBKT
+	&kp F1	&kp F2	&kp F3	&kp F4	&kp F5									&kp HOME	&kp END	&kp PG_UP	&kp PG_DN	&mod_ra_SQT
 	&mod_ra_MINUS	&kp N1	&kp N2	&kp N3	&kp N4	&kp N5							&kp N6	&kp N7	&kp N8	&kp N9	&kp N0	&kp EQUAL
 	&kp ESC	&kp Q	&kp W	&kp E	&mod_ra_R	&mod_ra_T							&kp Y	&kp U	&kp I	&kp O	&kp P	&kp LBKT
 	&mod_ra_TAB	&kp A	&mod_ra_S	&mod_ra_D	&kp F	&kp G							&kp H	&kp J	&kp K	&kp L	&kp SEMI	&kp BSLH
 	&kp LGUI	&kp Z	&kp X	&kp C	&kp V	&kp B	&td_lshift	&kp LCTRL	&layer_td	&magic MAGIC 0	&td_ctlopt	&td_rshift	&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH	&mod_ra_GRAVE
-	&kp F6	&kp F7	&kp F8	&kp F9	&kp F10		&kp BSPC	&kp LALT	&kp DEL	&kp RALT	&kp RET	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&mod_ra_SQT
+	&kp F6	&kp F7	&kp F8	&kp F9	&kp F10		&kp BSPC	&kp LALT	&kp DEL	&kp RALT	&kp RET	&kp SPACE		&kp LEFT	&kp UP	&kp DOWN	&kp RIGHT	&mod_ra_RBKT
 
             >;
         };
