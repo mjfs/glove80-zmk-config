@@ -296,7 +296,7 @@
 
 	combo_F11 {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_F1 k_F2>;
+		key-positions	=	<k_F8 k_F9>;
 		bindings	=	<&kp F11>;
 	};
 
