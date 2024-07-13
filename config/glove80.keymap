@@ -349,7 +349,7 @@
 	
 	combo_CTRL_BSP {
 		timeout-ms	=	<50>;
-		key-positions	=	<k_BSPC k_LALT>;
+		key-positions	=	<k_BSPC k_DEL>;
 		bindings	=	<&kp LC(BSPC)>;
 	};
 
