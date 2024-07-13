@@ -365,6 +365,13 @@
 		key-positions	=	<k_LOWER k_LALT>;
 		bindings	=	<&kp RET>;
 	};
+
+
+	combo_LGUI {
+		timeout-ms	=	<50>;
+		key-positions	=	<k_LCTRL k_LOWER>;
+		bindings	=	<&kp LGUI>;
+	};
 	
 	combo_K_APP {
 		timeout-ms	=	<50>;
